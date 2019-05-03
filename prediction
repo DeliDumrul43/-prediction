@@ -1,0 +1,71 @@
+print("Bu proje ABD nin Census Bureau projesinin tmeke varsayılarını uygulayan programdır")
+
+print("""
+
+■ ​Her 7 saniyede bir doğum  
+
+■ ​Her 13 saniyede bir ölüm  
+
+■ ​Her 45 saniyede yeni bir göçmen gelmektedir
+
+""")
+nufüs = 312032486
+dogum = 31557600 / 7
+goc = 31557600 / 45
+olum = 31557600 / 13
+birinci_yıl = []
+ikinci_yıl = []
+üçüncü_yıl = []
+dorduncu_yil = []
+besinci_yil = []
+"""birinci yıl için"""
+for i in range(1):
+    var = (dogum + goc) - olum
+    birinci_yıl.append(var)
+    oyilki = (nufüs + dogum + goc) - olum
+    fark = oyilki - nufüs
+    nufüs += var
+    break
+"""ikinci yıl için"""
+for j in range(1):
+    var2 = (dogum + goc) - olum
+    ikinci_yıl.append(var2)
+    oyilki_iki = (nufüs + dogum + goc) - olum
+    fark2 = oyilki_iki - nufüs
+    nufüs += var2
+    break
+"""üçüncü yıl için"""
+for k in range(1):
+    var3 = (dogum + goc) - olum
+    üçüncü_yıl.append(var3)
+    oyilki_uc = ( nufüs + dogum + goc) - olum
+    fark3 = oyilki_uc - nufüs
+    nufüs += var3
+    break
+"""dördüncü yıl için"""
+for p in range(1):
+    var4 = (dogum + goc) - olum
+    dorduncu_yil.append(var4)
+    oyilki_dort = ( nufüs + dogum + goc) - olum
+    fark4 = oyilki_dort - nufüs
+    nufüs += var4
+    break
+"""beşinci yıl için"""
+for n in range(1):
+    var5 = (dogum + goc) - olum
+    besinci_yil.append(var5)
+    oyilki_bes = (nufüs + dogum + goc) - olum
+    fark5 = oyilki_bes - nufüs
+    nufüs += var5
+    break
+
+
+print(
+    ("Toplam beş yılın nufüsu ",nufüs)
+    ("Her yıl olan için ise ;")
+    ("Birinci yıl nufüs artışı ",birinci_yıl,"Ve o yılın nufüs farkı",fark)
+    ("İkinci yıl nufüs artışı ",ikinci_yıl,"Ve o yılın nufüs farkı",fark2)
+    ("Üçüncü yıl nufüs artışı ",üçüncü_yıl,"Ve o yılın nufüs farkı",fark3)
+    ("Dördüncü yıl nufüs artışı ",dorduncu_yil,"Ve o yılın nufüs farkı",fark4)
+    ("Beşinci yıl nufüs artışı ",besinci_yil,"Ve o yılın nufüs farkı",fark5)
+)
